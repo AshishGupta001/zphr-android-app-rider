@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/photos_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_below="@+id/photos_viewpager"
+            android:paddingLeft="0dp"
+            android:layout_marginTop="@dimen/_minus30sdp"
+            android:paddingRight="0dp"
+            android:visibility="visible"
+            app:tabGravity="fill"
+            app:tabMinWidth="0dp"
+            app:tabMaxWidth="15dp"
+            app:tabRippleColor="@color/transparent_full"
+            android:clipToPadding="true"
+            app:tabIndicatorHeight="0dp"
+            app:tabPadding="1dp" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/circle_shadow_big"
+            android:padding="@dimen/_8sdp"
+            app:srcCompat="@drawable/ic_clear" />
+
+    </RelativeLayout>
+
+</LinearLayout>

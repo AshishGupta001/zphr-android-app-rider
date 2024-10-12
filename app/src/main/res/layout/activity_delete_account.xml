@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/design_toolbar_general" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/deleteAccountWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <com.view.anim.loader.AVLoadingIndicatorView
+            android:id="@+id/deleteAccountLoaderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="@color/black" />
+
+    </RelativeLayout>
+</LinearLayout>

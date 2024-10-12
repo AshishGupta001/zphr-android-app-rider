@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<!--    <item android:id="@+id/bannerBgView"  android:left="@dimen/_100sdp" android:top="@dimen/_3sdp">-->
+<!--        <shape>-->
+<!--            <solid android:color="@color/appThemeColor_1" />-->
+
+<!--            />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    &lt;!&ndash; Drop Shadow Stack &ndash;&gt;-->
+<!--    <item android:left="@dimen/_20sdp">-->
+<!--        <shape>-->
+
+<!--            <padding android:top="@dimen/_1sdp"/>-->
+<!--            <solid android:color="#00CCCCCC" />-->
+
+<!--            <corners android:topRightRadius="@dimen/_20sdp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item android:left="@dimen/_20sdp">-->
+<!--        <shape>-->
+
+<!--            <padding android:top="@dimen/_1sdp"/>-->
+<!--            <solid android:color="#10CCCCCC" />-->
+
+<!--            <corners android:topRightRadius="@dimen/_20sdp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item android:left="@dimen/_20sdp">-->
+<!--        <shape>-->
+
+<!--            <padding android:top="@dimen/_1sdp"/>-->
+<!--            <solid android:color="#20CCCCCC" />-->
+
+<!--            <corners android:topRightRadius="@dimen/_20sdp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item android:left="@dimen/_20sdp">-->
+<!--        <shape>-->
+<!--            <padding android:top="@dimen/_1sdp"/>-->
+
+<!--            <solid android:color="#30CCCCCC" />-->
+
+<!--            <corners android:topRightRadius="@dimen/_20sdp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item android:left="@dimen/_20sdp">-->
+<!--        <shape>-->
+
+<!--            <padding android:top="@dimen/_1sdp"/>-->
+
+<!--            <solid android:color="#50CCCCCC" />-->
+
+<!--            <corners android:topRightRadius="@dimen/_20sdp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+    <!-- Background -->
+
+
+    <item >
+        <shape>
+            <solid android:color="@android:color/white" />
+
+<!--            <corners android:topRightRadius="@dimen/_20sdp" />-->
+        </shape>
+    </item>
+
+
+
+</layer-list>

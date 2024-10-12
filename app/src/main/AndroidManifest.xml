@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zphr.user">
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FLAG_GRANT_READ_URI_PERMISSION" />
+    <uses-permission
+        android:name="android.permission.MANAGE_DOCUMENTS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <permission
+        android:name="com.zphr.user.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <uses-permission
+        android:name="com.zphr.user.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.general.files.MyApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppCompatTheme"
+        tools:replace="android:allowBackup">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3137346768994554~2524650086" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+        <meta-data
+            android:name="com.google.key1"
+            android:value="$2y$05$bQXz96EnXIJqLTK4Es3HsOZhvtH443XcWHyK0jz3I35gBdTbOc4Hi3950a5b2450af6105ac8b4222dd3fc18$2y$05$/VnqCEEk2X4xAliFRWziN.SiLW4x22TJNQZW7znYMJDQpJp/Qg2oi3950a5b2450af6105ac8b4222dd3fc18$2y$05$qooxVn0whDlCZndRlF0xw.3oekwom3hEq038OxeD95wVVWP1LGh963950a5b2450af6105ac8b4222dd3fc18$2y$05$kELajtRFg3ew1Vn9hTnsX.Ks5pI89Vi0bPulJ9tPlH7IlzMh8Y/si3950a5b2450af6105ac8b4222dd3fc18$2y$05$vf323ZhX7xGGcJusblJ.fu/sm01LvOSjas9AQre6M2vcdG4//NUiu3950a5b2450af6105ac8b4222dd3fc18$2y$05$kuE5Rl4KEqg/K6oz0ARHSuaJ1nl0rKjeLlNU3tQufudV6aP50naTG3950a5b2450af6105ac8b4222dd3fc18$2y$05$xCdz0fZEtkHR6SlvtszD5uJDwV2KwDFI3S7m2vkHVALu6UMAdLUFe3950a5b2450af6105ac8b4222dd3fc18$2y$05$rCpdA3beSYmralh7kMYkEu3tD9zl0mH5JSD6xyO2ml4GIBj/QgYEu3950a5b2450af6105ac8b4222dd3fc18$2y$05$DEM/XHBt1WAMv222QBesk.o5VbQlrnXZWj112yu9qpYNxFrhjtHPy3950a5b2450af6105ac8b4222dd3fc18$2y$05$depmjY2y4m66K.z7DUe3iuJX5rCGaa9KP4XHFpendxlatnjyn2EXu" />
+        <meta-data
+            android:name="com.google.key2"
+            android:value="3950a5b2450af6105ac8b4222dd3fc18" />
+
+        <activity android:name="com.zphr.user.InviteStageActivity" />
+        <activity android:name="com.zphr.user.EmailStageActivity" />
+        <activity android:name="com.zphr.user.NameStageActivity" />
+        <activity android:name="com.zphr.user.PasswordStageActivity" />
+        <activity
+            android:name="com.zphr.user.MobileStegeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.general.call.V3CallScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.SearchCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.RideDeliveryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.zphr.user.deliverAll.checkAddView" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name="com.zphr.user.MenuSettingActivity" />
+        <activity
+            android:name="com.zphr.user.UberXHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.zphr.user.MyProfileNewActivity" />
+        <activity
+            android:name="com.zphr.user.DonationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.PrescriptionHistoryImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.PrescriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ProviderInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.sinch.android.rtc.internal.client.fcm.InstanceIDTokenService"
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_android_geo_api_key" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.general.files.AlarmReceiver"
+            android:enabled="false">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+            <!-- </intent-filter> -->
+        </receiver>
+
+        <service
+            android:name="com.zphr.user.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ <service
+            android:name="com.general.files.MyBackGroundService"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Service Alert"
+            android:persistent="true" />
+        -->
+        <!--
+   <receiver
+            android:name=".StartServiceReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="com.zphr.user.StartServiceReceiver" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+            </intent-filter>
+        </receiver>
+        -->
+        <activity
+            android:name="com.zphr.user.LauncherActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name="com.zphr.user.AppLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimTheme" />
+        <activity
+            android:name="com.zphr.user.SelectCountryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.VerifyFbProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/FBtheme"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.zphr.user.SearchPickupLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.FareEstimateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MyProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.StaticPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ContactUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.QuestionAnswerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.HistoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.Base" />
+        <activity
+            android:name="com.zphr.user.RatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.CardPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.EmergencyContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ConfirmEmergencyTapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.EnterDeliveryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MyWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MyWalletHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.InviteFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.VerifyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.UberXSelectServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.UberXActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.OnGoingTripsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.OnGoingTripDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.AppLoignRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.AccountverificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.SupportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.FareBreakDownActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.PrefranceActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.zphr.user.FirebaseDataReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.zphr.user.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.zphr.user.SearchLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ListAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ScheduleDateSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MaintenanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ManageAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.DeleteAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.Help_MainCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.Help_SubCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.Help_DetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.RentalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.RentalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cropper.CropImageActivity"
+            android:screenOrientation="portrait" /> <!-- Multi delivery_v2 Screens -->
+        <activity
+            android:name="com.zphr.user.CommonDeliveryTypeSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.EnterMultiDeliveryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MultiDeliverySecondPhaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MultiDeliveryThirdPhaseActivity"
+            android:screenOrientation="portrait" /> <!-- Deliver all -->
+        <activity
+            android:name="com.zphr.user.deliverAll.FoodDeliveryHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.SearchFoodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.RestaurantsSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.SearchRestaurantListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.AddBasketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.CheckOutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.zphr.user.deliverAll.EditCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.PaymentCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.ServiceHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.OrderPlaceConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.ActiveOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.TrackOrderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.FoodRatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.RestaurantAllDetailsNewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.CouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.BusinessProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.BusinessSetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.SelectOrganizationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.OrganizationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MyBusinessProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.NotificationDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.QuickPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.livechatinc.inappchat.ChatWindowActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.UberxFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MoreInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.UberxCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.CarWashBookingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.MoreServiceInfoActivity"
+            android:screenOrientation="portrait" /> <!-- Book for Some Else Activities -->
+        <activity
+            android:name="com.zphr.user.BookSomeOneElsePickContactActivity"
+            android:screenOrientation="portrait" /> <!-- FavDriver Activities -->
+        <activity
+            android:name="com.zphr.user.FavouriteDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.BookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.ViewMultiDeliveryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.UserPrefrenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.GenieDeliveryHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.BuyAnythingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.general.files.SafetyDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <activity
+            android:name="com.general.files.CovidDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" /> <!-- Verify Charges -->
+        <activity
+            android:name="com.zphr.user.AdditionalChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.PaymentWebviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.deliverAll.FindStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.SearchServiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.zphr.user.BiddingHistoryDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.BiddingTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zphr.user.RequestBidInfoActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

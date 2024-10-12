@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_include"
+        layout="@layout/design_toolbar_general" />
+
+    <!--    <com.view.MaterialTabs-->
+    <!--        -->
+    <!--        android:id="@+id/material_tabs"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_gravity="start"-->
+    <!--        android:background="#F0F4F5"-->
+    <!--        android:focusable="true"-->
+    <!--        android:focusableInTouchMode="true"-->
+    <!--        app:mtIndicatorColor="@color/black"-->
+    <!--        app:mtPaddingMiddle="false"-->
+    <!--        app:mtSameWeightTabs="true"-->
+    <!--        app:mtTabPaddingLeftRight="20dp"-->
+    <!--        app:mtTextColorSelected="#242424"-->
+    <!--        app:mtTextColorUnSelected="#878787" />-->
+
+    <View
+        android:id="@+id/bgview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@id/toolbar_include"
+        android:background="@color/appThemeColor_1" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/appLogin_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tablayoutArea"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        />
+
+    <LinearLayout
+        android:id="@+id/tablayoutArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bgview"
+        android:layout_marginTop="-25dp"
+        android:background="@color/transparent_full">
+
+        <include layout="@layout/tablayout_design" />
+    </LinearLayout>
+
+    <!--<com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:disable_date_color="#ABABAB"
+        custom:header_bg="@drawable/calendar_header"
+        custom:range_color="@color/range_color"
+        custom:selected_date_circle_color="@color/selected_date_circle_color"
+        custom:title_color="@color/calendar_header_title"
+        android:layout_centerInParent="true"/>-->
+
+
+</RelativeLayout>

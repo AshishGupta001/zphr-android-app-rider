@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8Cffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imagePlace"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sessionupdate" />
+
+        <com.view.MTextView
+            android:id="@+id/noteTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_14"
+            app:customTypeFace="@string/robotobold"
+            tools:ignore="RtlCompat"
+            tools:text="Updating your Session..." />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <com.view.MTextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="1.4"
+        android:textAlignment="viewStart"
+        android:textColor="@color/Gray"
+        android:textSize="@dimen/txt_size_12"
+        app:customTypeFace="@string/robotoRegular" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <com.view.MTextView
+            android:id="@+id/btnYes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_gray_line"
+            android:gravity="center"
+            android:text="Yes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:customTypeFace="@string/systemBold_name" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <com.view.MTextView
+            android:id="@+id/btnNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_gray_line"
+            android:gravity="center"
+            android:text="No"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:customTypeFace="@string/systemBold_name" />
+    </LinearLayout>
+</LinearLayout>
