@@ -476,7 +476,7 @@ public class SearchLocationActivity extends ParentActivity implements PlacesAdap
         });
 
         showMapLocation();
-        placesRecyclerView.setHasFixedSize(true);
+//        placesRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         placesRecyclerView.setLayoutManager(mLayoutManager);
         placesRecyclerView.setItemAnimator(new DefaultItemAnimator());

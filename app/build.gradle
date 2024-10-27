@@ -23,14 +23,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    compileSdkVersion 33
+    compileSdk 34
     buildToolsVersion '33.0.0'
     defaultConfig {
         applicationId "com.zphr.user"
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 2
-        versionName "1.1"
+        versionName "1.2"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         renderscriptTargetApi 28
@@ -129,8 +129,8 @@ dependencies {
     // TODO: 12-12-2021 / Viral | AUDIO_CALLING_METHOD = LOCAL
     implementation fileTree(include: ['*.jar', 'SysBaseLib.aar', 'sinch_lib.aar', 'AwesomeCalendar.aar', 'Skeleton.aar', 'AppDatePicker.aar'], dir: 'libs')
 
-    //implementation 'com.infobip:google-webrtc:1.0.0035529'
-    implementation 'org.webrtc:google-webrtc:1.0.32006'
+    implementation 'com.infobip:google-webrtc:1.0.0035529'
+//    implementation 'org.webrtc:google-webrtc:1.0.32006'
 
     // TODO: 12-12-2021 / Viral | AUDIO_CALLING_METHOD = SINCH
     //implementation fileTree(include: ['*.jar', 'SysBaseLib.aar', 'sinch_lib_v.aar', 'AwesomeCalendar.aar', 'Skeleton.aar', 'AppDatePicker.aar'], dir: 'libs')
