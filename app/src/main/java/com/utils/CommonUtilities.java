@@ -1,5 +1,11 @@
 package com.utils;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+
+import com.general.files.MyApp;
+
 import java.util.ArrayList;
 
 public class CommonUtilities {
@@ -29,4 +35,18 @@ public class CommonUtilities {
     public static String DayFormatEN = "yyyy-MM-dd";
     public static String DayTimeFormat = "dd MMM, yyyy hh:mm aa";
     public static ArrayList<String> ageRestrictServices = new ArrayList<>();
+
+    public static String getAppVersion() {
+        try {
+            Context context = MyApp.getInstance().getCurrentAct();
+            PackageInfo packageInfo =  context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            return packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return "N/A";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "N/A";
+        }
+    }
 }

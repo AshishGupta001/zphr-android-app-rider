@@ -40,6 +40,16 @@ import com.general.call.LocalHandler;
 import com.general.call.SinchHandler;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
+import com.service.handler.ApiHandler;
+import com.service.handler.AppService;
+import com.service.server.ServerTask;
+import com.utils.CommonUtilities;
+import com.utils.IntentAction;
+import com.utils.Logger;
+import com.utils.Utils;
+import com.utils.WeViewFontConfig;
+import com.view.GenerateAlertBox;
+import com.view.MTextView;
 import com.zphr.user.AccountverificationActivity;
 import com.zphr.user.AddAddressActivity;
 import com.zphr.user.AdditionalChargeActivity;
@@ -55,16 +65,6 @@ import com.zphr.user.RideDeliveryActivity;
 import com.zphr.user.SearchPickupLocationActivity;
 import com.zphr.user.UberXActivity;
 import com.zphr.user.UberXHomeActivity;
-import com.service.handler.ApiHandler;
-import com.service.handler.AppService;
-import com.service.server.ServerTask;
-import com.utils.CommonUtilities;
-import com.utils.IntentAction;
-import com.utils.Logger;
-import com.utils.Utils;
-import com.utils.WeViewFontConfig;
-import com.view.GenerateAlertBox;
-import com.view.MTextView;
 
 import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
@@ -336,7 +336,12 @@ public class MyApp extends Application {
             IntentFilter mIntentFilter = new IntentFilter();
             mIntentFilter.addAction(String.format("%s%s%s%s%s", "Act", "ivi", "tyR", "egis", "ter"));
             this.actRegisterReceiver = new ActRegisterReceiver();
-            this.registerReceiver(this.actRegisterReceiver, mIntentFilter);
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                this.registerReceiver(this.actRegisterReceiver, mIntentFilter, Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                this.registerReceiver(this.actRegisterReceiver, mIntentFilter);
+            }
+
         }
     }
 
@@ -345,7 +350,16 @@ public class MyApp extends Application {
         IntentFilter mIntentFilter = new IntentFilter();
         mIntentFilter.addAction(LocationManager.PROVIDERS_CHANGED_ACTION);
         this.mGpsReceiver = new GpsReceiver();
-        this.registerReceiver(this.mGpsReceiver, mIntentFilter);
+        try {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                this.registerReceiver(this.mGpsReceiver, mIntentFilter, Context.RECEIVER_EXPORTED);
+            } else {
+                this.registerReceiver(this.mGpsReceiver, mIntentFilter);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void registerAction() {
@@ -356,7 +370,11 @@ public class MyApp extends Application {
         filter.addAction(IntentAction.NOTIFICATION_CLOSE);
         filter.addAction(IntentAction.NOTIFICATION_VIEW_ORDER);
         filter.addAction(IntentAction.NOTIFICATION_TRACK_ORDER);
-        this.registerReceiver(receiver, filter);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            this.registerReceiver(this.receiver, filter, Context.RECEIVER_NOT_EXPORTED);
+        } else {
+            this.registerReceiver(this.receiver, filter);
+        }
     }
 
     private void removeAllRunningInstances() {
@@ -381,7 +399,11 @@ public class MyApp extends Application {
 //                mIntentFilter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
 
                 this.mNetWorkReceiver = new NetworkChangeReceiver();
-                this.registerReceiver(this.mNetWorkReceiver, mIntentFilter);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                    this.registerReceiver(this.mNetWorkReceiver, mIntentFilter, Context.RECEIVER_EXPORTED);
+                } else {
+                    this.registerReceiver(this.mNetWorkReceiver, mIntentFilter);
+                }
             } catch (Exception e) {
                 Logger.e("NetWorkDemo", "Network connectivity register error occurred");
             }
@@ -557,7 +579,7 @@ public class MyApp extends Application {
 //                }
                 LocalNotification.clearAllNotifications();
 
-                if ( (activity instanceof UberXActivity && uberXAct == activity) || (uberXAct == null  && activity instanceof MainActivity && mainAct == activity)) {
+                if ((activity instanceof UberXActivity && uberXAct == activity) || (uberXAct == null && activity instanceof MainActivity && mainAct == activity)) {
                     AppService.destroy();
                 }
             }

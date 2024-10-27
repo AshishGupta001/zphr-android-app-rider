@@ -68,6 +68,7 @@ public class AddDrawer implements AdapterView.OnItemClickListener {
     LinearLayout logoutarea;
     ImageView logoutimage;
     MTextView logoutTxt;
+    MTextView versionNumberText;
     ImageView imgSetting;
     LinearLayout left_linear;
     MainActivity mainActivity;
@@ -93,6 +94,7 @@ public class AddDrawer implements AdapterView.OnItemClickListener {
         logoutarea = (LinearLayout) view.findViewById(R.id.logoutarea);
         logoutimage = (ImageView) view.findViewById(R.id.logoutimage);
         logoutTxt = (MTextView) view.findViewById(R.id.logoutTxt);
+        versionNumberText = (MTextView) view.findViewById(R.id.versionNumber);
         imgSetting = (ImageView) view.findViewById(R.id.imgSetting);
         left_linear = (LinearLayout) view.findViewById(R.id.left_linear);
         imgSetting.setOnClickListener(new setOnClickLst());
@@ -100,6 +102,7 @@ public class AddDrawer implements AdapterView.OnItemClickListener {
         generalFunc = MyApp.getInstance().getGeneralFun(mContext);
         logoutimage.setImageDrawable(mContext.getResources().getDrawable(R.mipmap.ic_menu_logout));
         logoutTxt.setText(generalFunc.retrieveLangLBl("", "LBL_SIGNOUT_TXT"));
+        versionNumberText.setText(mContext.getResources().getString(R.string.version_text,  CommonUtilities.getAppVersion()));
         walletbalncetxt = (MTextView) view.findViewById(R.id.walletbalncetxt);
         backimageView = (ImageView) view.findViewById(R.id.backimageView);
 
